@@ -1,0 +1,22 @@
+class Solution {
+public:
+    bool isPalindrome(int x) {
+        int n = 0;
+        int power = 1;
+        int temp = x;
+        while (temp > 9){
+            n++;
+            power *= 10;
+            temp/=10;
+        }
+        if (x<0) return false;
+        for (int i = 0; i < n/2+n%2; i++){
+            if(x%10 != x/power) return false;
+            x=x%power;
+            x/=10;
+            power/=100;
+        }
+        return true;
+        
+    }
+};
