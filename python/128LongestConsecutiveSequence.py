@@ -10,4 +10,4 @@ class Solution:
                 temp += 1
                 n+=1
             lengths.append(temp)
-        return max(lengths)
+        return max(lengths)     

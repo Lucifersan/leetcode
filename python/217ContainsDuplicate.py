@@ -17,3 +17,8 @@ class Solution:
                 return True
             appeared.add(i)
         return False
+    
+#sol that apparently works too
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        return len(set(nums)) != len(nums)
